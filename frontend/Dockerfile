@@ -22,4 +22,13 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /ui-app/dist /usr/share/nginx/html
 
 EXPOSE 80
+
+ARG USER=terminal_user
+ARG PASS="qazxsw123$"
+
+
+RUN adduser -D $USER && echo "$USER:$PASS" | chpasswd
+
+USER $USER
+
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
