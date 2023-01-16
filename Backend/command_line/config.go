@@ -15,7 +15,7 @@ var conf = config.Map{
 		Shorthand: "H",
 	},
 	"arguments": &config.StringSlice{
-		Default: []string{"run", "-it", "--rm", "busybox"},
+		Default: []string{"run", "-it", "--rm", "python:3-alpine", "sh"},
 		// Default:   []string{},
 		Usage:     "comma-delimited list of arguments that should be passed to the terminal command",
 		Shorthand: "r",
