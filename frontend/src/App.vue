@@ -11,7 +11,13 @@ const term = new Terminal({
     foreground: "#F5F8FA"
   },
   rows: 30,
-  cols: 80
+  cols: 80,
+  screenKeys: true,
+  useStyle: true,
+  cursorBlink: true,
+  fullscreenWin: true,
+  maximizeWin: true,
+  screenReaderMode: true,
 },
 );
 window.addEventListener('load', function () {

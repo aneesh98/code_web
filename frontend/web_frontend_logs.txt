@@ -1,0 +1,10 @@
+
+> term-emulator@0.0.0 dev
+> vite
+
+
+  VITE v4.0.3  ready in 490 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help

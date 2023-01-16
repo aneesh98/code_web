@@ -10,17 +10,19 @@ import (
 
 var conf = config.Map{
 	"allowed-hostnames": &config.StringSlice{
-		Default:   []string{"localhost"},
+		Default:   []string{"localhost", "ec2-3-110-185-76.ap-south-1.compute.amazonaws.com"},
 		Usage:     "comma-delimited list of hostnames that are allowed to connect to the websocket",
 		Shorthand: "H",
 	},
 	"arguments": &config.StringSlice{
-		Default:   []string{"run", "-it", "--rm", "busybox"},
+		Default: []string{"run", "-it", "--rm", "busybox"},
+		// Default:   []string{},
 		Usage:     "comma-delimited list of arguments that should be passed to the terminal command",
 		Shorthand: "r",
 	},
 	"command": &config.String{
-		Default:   "/usr/local/bin/docker",
+		Default: "/usr/local/bin/docker",
+		// Default:   "/bin/bash",
 		Usage:     "absolute path to command to run",
 		Shorthand: "t",
 	},
@@ -64,7 +66,7 @@ var conf = config.Map{
 		Usage:   "url path to the endpoint that xterm.js should attach to",
 	},
 	"server-addr": &config.String{
-		Default:   "127.0.0.1",
+		Default:   "0.0.0.0",
 		Usage:     "ip interface the server should listen on",
 		Shorthand: "a",
 	},
